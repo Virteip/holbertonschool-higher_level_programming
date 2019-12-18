@@ -7,7 +7,7 @@ def print_matrix_integer(matrix=[[]]):
         for i in matrix:
             separate = ' '
             for j in i:
-                print("{}".format(j), end='')
+                print("{:d}".format(j), end='')
                 if j != i[-1]:
-                    print("{}".format(separate), end='')
+                    print("{:s}".format(separate), end='')
             print()
