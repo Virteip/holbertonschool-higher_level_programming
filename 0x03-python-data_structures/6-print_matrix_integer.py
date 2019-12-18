@@ -4,8 +4,8 @@
 def print_matrix_integer(matrix=[[]]):
 
     if matrix:
-        separate = " "
         for i in matrix:
+            separate = " "
             for j in i:
                 print("{}".format(j), end='')
                 if j != i[-1]:
