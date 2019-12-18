@@ -2,13 +2,7 @@
 
 
 def max_integer(my_list=[]):
-    max_v = 0
-
     if not my_list:
         return None
-
-    for i in my_list:
-        if i > max_v:
-            max_v = i
-
-    return max_v
+    my_list.sort()
+    return my_list[-1]
