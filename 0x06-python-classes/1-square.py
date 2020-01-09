@@ -8,5 +8,4 @@ class Square:
     """
     Init method to set size var
     """
-    def __init__(self, size):
-        self.size = size
+    self.__size = size
