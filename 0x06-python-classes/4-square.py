@@ -26,16 +26,18 @@ class Square:
     """
     Setter function.
     """
-    def size(self, value):
-        if type(size) == int and size >= 0:
-            self.__size = value
-        elif type(size) != int:
-            raise NameError("size must be an integer")
-        elif size < 0:
-            raise NameError("size must be >= 0")
+    @property
+    def size(self):
+        return self.__size
 
     """
     Getter function.
     """
-    def size(self):
-        return self.__size
+    @size.setter
+    def size(self, value):
+        if type(value) == int and value >= 0:
+            self.__size = value
+        elif type(value) != int:
+            raise NameError("size must be an integer")
+        elif value < 0:
+            raise NameError("size must be >= 0")
