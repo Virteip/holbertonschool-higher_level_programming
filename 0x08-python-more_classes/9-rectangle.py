@@ -112,3 +112,10 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
+
+    """
+    Return square
+    """
+    @classmethod
+    def square(cls, size=0):
+        return cls(width=size, height=size)
