@@ -72,11 +72,12 @@ class Rectangle:
     def __str__(self):
         square = []
         if self.__width and self.__height:
-            for i in range(0,self.__height):
+            for i in range(0, self.__height):
                 for j in range(self.__width):
                     square.append("#")
-                square.append('\n')
-            return "".join(square)
+                if j <= self.__width:
+                    square.append('\n')
+            return "".join(square[:-1])
         else:
-            square = ""
+            square = ''
             return square
