@@ -1,0 +1,8 @@
+>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+>>> matrix_mul([[25, 25], [33, 33]], [[52, 52], [37, 37]])
+array([[2225, 2225],
+       [2937, 2937]])
+>>> matrix_mul([25, 25],  None)
+Traceback (most recent call last):
+TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
