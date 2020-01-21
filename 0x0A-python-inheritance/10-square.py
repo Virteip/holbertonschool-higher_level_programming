@@ -5,9 +5,6 @@ Class Rectangle
 
 
 Rectangle = __import__("9-rectangle").BaseGeometry
-"""
-Calculate and return rectangle area
-"""
 
 
 class Square(Rectangle):
