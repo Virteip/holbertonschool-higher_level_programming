@@ -29,7 +29,7 @@ class Rectangle(BaseGeometry):
     Constructor method initializer
     """
     def __init__(self, width, height):
-        if self.integer_validator("width", width) or\
-           self.integer_validator("height", height):
-            self.__width = width
-            self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
