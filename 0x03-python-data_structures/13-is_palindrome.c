@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *first = *head;
 	listint_t *second = *head;
-	listint_t *new = a;
+	listint_t *new = *head;
 	listint_t *ante = NULL;
 	unsigned long int res = 0;
 
@@ -20,7 +20,9 @@ int is_palindrome(listint_t **head)
 	{
 		second = second->next->next;
 		first = first->next; }
-	while (node != NULL)
+	new = first;
+	ante = NULL;
+	while (new != NULL)
 	{
 		second = new->next;
 		new->next = ante;
