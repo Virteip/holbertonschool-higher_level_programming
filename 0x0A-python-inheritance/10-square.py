@@ -4,7 +4,7 @@ Class Rectangle
 """
 
 
-Rectangle = __import__("9-rectangle").BaseGeometry
+Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
