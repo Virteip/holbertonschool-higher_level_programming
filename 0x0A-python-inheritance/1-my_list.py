@@ -9,6 +9,4 @@ class MyList(list):
     Define method to order list by copying it
     """
     def print_sorted(self):
-        copy = self.copy()
-        copy = copy.sort()
-        print(copy)
+        print(sorted(self))
