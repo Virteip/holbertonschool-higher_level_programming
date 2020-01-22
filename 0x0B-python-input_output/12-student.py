@@ -12,10 +12,12 @@ class Student:
 
     def to_json(self, attrs=None):
         if not attrs:
-            output = self.__dict__
+            output = {}
+            for position in self.__dict__:
+                output[position] = self.__dict__[position]
         elif attrs:
             output = {}
             for position in range(0, len(attrs)):
                 if attrs[position] in self.__dict__:
                     output[attrs[position]] = self.__dict__[attrs[position]]
-        return output
+        return (output)
