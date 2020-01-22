@@ -11,10 +11,8 @@ class Student:
         return self.__dict__
 
     def to_json(self, attrs=None):
-        if not attrs:
-            output = {}
-            for position in self.__dict__:
-                output[position] = self.__dict__[position]
+        if attrs is None:
+            output = self.__dict__
         elif attrs:
             output = {}
             for position in range(0, len(attrs)):
