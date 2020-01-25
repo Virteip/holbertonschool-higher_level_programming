@@ -95,3 +95,23 @@ class Rectangle(Base):
     """
     def __str__(self):
         return "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
+
+    """
+    Args Update
+    """
+    def update(self, *args, **kwargs):
+        if args:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                if i == 1:
+                    self.width = args[1]
+                if i == 2:
+                    self.height = args[2]
+                if i == 3:
+                    self.x = args[3]
+                if i == 4:
+                    self.y = args[4]
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
