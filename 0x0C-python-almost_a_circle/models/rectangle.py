@@ -84,9 +84,9 @@ class Rectangle(Base):
                 for j in range(self.__width):
                     if j == 0:
                         print(" " * self.__x, end='')
-                    print("#",end='')
+                    print("#", end='')
                 if j <= self.__width:
-                    print('\n',end='')
+                    print('\n', end='')
         else:
             print()
 
@@ -94,7 +94,10 @@ class Rectangle(Base):
     Print rectangle info for programming details
     """
     def __str__(self):
-        return "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
+        return "[Rectangle] " + "(" + str(self.id) + ") "\
+            + str(self.__x) + "/"\
+            + str(self.__y) + " - " + str(self.__width) + "/"\
+            + str(self.__height)
 
     """
     Args Update
