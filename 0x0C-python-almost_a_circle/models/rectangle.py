@@ -3,9 +3,6 @@
 Rectangle Class
 """
 from models.base import Base
-"""
-Rectangle Class
-"""
 
 
 class Rectangle(Base):
@@ -19,39 +16,39 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    """
-    Getters: width
-    """
     @property
     def width(self):
+        """
+        Getters: width
+        """
         return self.__width
 
-    """
-    Getters: height
-    """
     @property
     def height(self):
+        """
+        Getters: height
+        """
         return self.__height
 
-    """
-    Getters: x
-    """
     @property
     def x(self):
+        """
+        Getters: x
+        """
         return self.__x
 
-    """
-    Getters: y
-    """
     @property
     def y(self):
+        """
+        Getters: y
+        """
         return self.__y
 
-    """
-    Setters: width
-    """
     @width.setter
     def width(self, value):
+        """
+        Setters: width
+        """
         if type(value) == int and value >= 0:
             self.__width = value
         elif type(value) != int:
@@ -59,11 +56,11 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("width must be > 0")
 
-    """
-    Setters: height
-    """
     @height.setter
     def height(self, value):
+        """
+        Setters: height
+        """
         if type(value) == int and value >= 0:
             self.__height = value
         elif type(value) != int:
@@ -71,11 +68,11 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("height must be > 0")
 
-    """
-    Setters: x
-    """
     @x.setter
     def x(self, value):
+        """
+        Setters: x
+        """
         if type(value) == int and value >= 0:
             self.__x = value
         elif type(value) != int:
@@ -83,11 +80,11 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("x must be >= 0")
 
-    """
-    Setters: y
-    """
     @y.setter
     def y(self, value):
+        """
+        Setters: y
+        """
         if type(value) == int and value >= 0:
             self.__y = value
         elif type(value) != int:
@@ -95,16 +92,16 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("y must be >= 0")
 
-    """
-    Area
-    """
     def area(self):
+        """
+        Area
+        """
         return self.__height*self.__width
 
-    """
-    Print Rectangle using #s to stdout
-    """
     def display(self):
+        """
+        Print Rectangle using #s to stdout
+        """
         if self.__width and self.__height:
             print('\n' * self.__y, end='')
             for i in range(0, self.__height):
@@ -117,19 +114,19 @@ class Rectangle(Base):
         else:
             print()
 
-    """
-    Print rectangle info for programming details
-    """
     def __str__(self):
+        """
+        Print rectangle info for programming details
+        """
         return "[Rectangle] " + "(" + str(self.id) + ") "\
             + str(self.__x) + "/"\
             + str(self.__y) + " - " + str(self.__width) + "/"\
             + str(self.__height)
 
-    """
-    Args Update
-    """
     def update(self, *args, **kwargs):
+        """
+        Args Update
+        """
         if args:
             for i in range(len(args)):
                 if i == 0:
@@ -146,10 +143,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    """
-    Dict Rep of Rectangle Class
-    """
     def to_dictionary(self):
+        """
+        Dict Rep of Rectangle Class
+        """
         dict_attr = {}
         attributes = ['x', 'y', 'id', 'width', 'height']
         for key in attributes:
