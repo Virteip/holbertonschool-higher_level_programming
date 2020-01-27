@@ -49,24 +49,24 @@ class Rectangle(Base):
         """
         Setters: width
         """
-        if type(value) == int and value >= 0:
-            self.__width = value
-        elif type(value) != int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @height.setter
     def height(self, value):
         """
         Setters: height
         """
-        if type(value) == int and value >= 0:
-            self.__height = value
-        elif type(value) != int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
         elif value <= 0:
             raise ValueError("height must be > 0")
+        else:
+            self.__height = value
 
     @x.setter
     def x(self, value):
