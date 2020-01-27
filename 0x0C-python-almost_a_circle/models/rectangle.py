@@ -3,6 +3,9 @@
 Rectangle Class
 """
 from models.base import Base
+"""
+Rectangle Class
+"""
 
 
 class Rectangle(Base):
