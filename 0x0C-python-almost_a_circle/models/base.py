@@ -51,6 +51,8 @@ class Base:
         """
         Return list from JSON representation
         """
+        if json_string is None or json_string is "":
+            return "[]"
         return json.loads(json_string)
 
     @classmethod
