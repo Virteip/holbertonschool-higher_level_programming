@@ -28,7 +28,7 @@ class Base:
         Return JSON representation of list_dictionaries
         """
         file = []
-        if list_dictionaries is None or list_dictionaries is "":
+        if list_dictionaries is None or list_dictionaries is "[]":
             return file
         return json.dumps(list_dictionaries)
 
