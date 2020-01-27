@@ -13,25 +13,28 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Class BAse
+        """
         if id:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    """
-    Return JSON representation of list_dictionaries
-    """
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+        Return JSON representation of list_dictionaries
+        """
         file = json.dumps(list_dictionaries)
         return file
 
-    """
-    Return JSON representation of list_dictionaries
-    """
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        Return JSON representation of list_dictionaries
+        """
         new_list = []
         with open(cls.__name__ + ".json", 'w', encoding="utf-8") as file:
             if list_objs is None:
@@ -42,18 +45,18 @@ class Base:
                 new_list = cls.to_json_string(new_list)
                 file.write(new_list)
 
-    """
-    Return list from JSON representation
-    """
     @staticmethod
     def from_json_string(json_string):
+        """
+        Return list from JSON representation
+        """
         return json.loads(json_string)
 
-    """
-    Return list from JSON representation
-    """
     @classmethod
     def create(cls, **dictionary):
+        """
+        Return list from JSON representation
+        """
         if cls.__name__ == "Rectangle":
             res = cls(8, 8)
         elif cls.__name__ == "Square":
@@ -61,11 +64,11 @@ class Base:
         res.update(**dictionary)
         return res
 
-    """
-    Return list of instances
-    """
     @classmethod
     def load_from_file(cls):
+        """
+        Return list of instances
+        """
         new_list = []
         name = cls.__name__ + ".json"
         if os.path.isfile(name):
