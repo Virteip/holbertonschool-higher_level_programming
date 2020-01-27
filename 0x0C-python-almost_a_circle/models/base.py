@@ -14,7 +14,7 @@ class Base:
 
     def __init__(self, id=None):
         """
-        Class BAse
+        Class Base
         """
         if id:
             self.id = id
@@ -27,8 +27,10 @@ class Base:
         """
         Return JSON representation of list_dictionaries
         """
-        file = json.dumps(list_dictionaries)
-        return file
+        file = []
+        if list_dictionaries is None:
+            return file
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
