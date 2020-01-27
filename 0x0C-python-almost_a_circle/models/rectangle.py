@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Rectangle Class
+"""
 from models.base import Base
 
 

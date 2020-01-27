@@ -1,9 +1,15 @@
 #!/usr/bin/python3
+"""
+Base module
+"""
 import json
 import os
 
 
 class Base:
+    """
+    Class BAse
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
