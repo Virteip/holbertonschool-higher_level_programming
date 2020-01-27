@@ -118,3 +118,13 @@ class Rectangle(Base):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    """
+    Dict Rep of Rectangle Class
+    """
+    def to_dictionary(self):
+        dict_attr = {}
+        attributes = ['x', 'y', 'id', 'width', 'height']
+        for key in attributes:
+            dict_attr.update({key: getattr(self, key)})
+        return dict_attr
