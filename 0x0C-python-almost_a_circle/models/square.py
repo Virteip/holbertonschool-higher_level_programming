@@ -12,32 +12,32 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
-    """
-    Print string with str
-    """
     def __str__(self):
+        """
+        Print string with str
+        """
         return "[Square] " + "(" + str(self.id) + ") "\
             + str(self.x) + "/" + str(self.y) + " - " + str(self.width)
 
-    """
-    Getter: size
-    """
     @property
     def size(self):
+        """
+        Getter: size
+        """
         return self.width
 
-    """
-    Setter: size
-    """
     @size.setter
     def size(self, width):
+        """
+        Setter: size
+        """
         self.width = width
         self.height = width
 
-    """
-    Args Update
-    """
     def update(self, *args, **kwargs):
+        """
+        Args Update
+        """
         if args:
             for i in range(len(args)):
                 if i == 0:
@@ -52,10 +52,10 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    """
-    Dict representation of class
-    """
     def to_dictionary(self):
+        """
+        Dict representation of class
+        """
         dict_attr = {}
         attributes = ['id', 'size', 'x', 'y']
         for key in attributes:
