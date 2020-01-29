@@ -6,7 +6,7 @@ import unittest
 import pep8
 
 
-class TestBase(unittest.TesCase):
+class TestBase(unittest.TestCase):
     """
     Test cases for Base module
     """
