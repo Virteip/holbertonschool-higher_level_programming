@@ -10,7 +10,7 @@ class TestsRect(unittest.TestCase):
     """Class TEstRect"""
     def test_rectangle_true_normal_values(self):
         """test true"""
-        self.assertEqual(Rectangle(1, 1).id, 2)
+        self.assertEqual(Rectangle(1, 1).id, 1)
         self.assertEqual(Rectangle(8, 8).x, 0)
         self.assertEqual(Rectangle(2, 2).y, 0)
         self.assertEqual(Rectangle(8, 8).width, 8)
