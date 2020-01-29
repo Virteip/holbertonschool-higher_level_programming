@@ -10,7 +10,7 @@ class TestBase(unittest.TesCase):
     """
     Test cases for Base module
     """
-    def test_pep8(self):
+    def test_bettystyle(self):
         """
         Check PEP8
         """
