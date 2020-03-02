@@ -1,2 +1,2 @@
 -- Display count of certain element
-SELECT id WHERE id = 98, COUNT(id);
+SELECT COUNT(id) FROM first_table WHERE id = 98;
