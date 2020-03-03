@@ -1,5 +1,5 @@
 -- Lists all shows contained in hbtn_0d_tvshows that have at least one genre linked
 -- T#11
-SELECT tv_shows.title, IFNULL(tv_show_genres.genre_id, "NULL") FROM tv_shows
+SELECT tv_shows.title, IFNULL(tv_show_genres.genre_id, "NULL") as genre_id FROM tv_shows
 LEFT JOIN tv_show_genres ON tv_show_genres.show_id = tv_shows.id
 ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
