@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Print names that start with n orN
+"""
 import MySQLdb
 from sys import argv
 
