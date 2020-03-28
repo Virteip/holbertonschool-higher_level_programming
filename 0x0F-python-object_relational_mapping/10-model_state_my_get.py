@@ -13,9 +13,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).filter_by(name=sys.argv[4]).\
-        order_by(State.id)
-    query = query.all()
+    query = session.query(State).filter_by(name=sys.argv[4]).all()
 
     if query:
         for result in query:
