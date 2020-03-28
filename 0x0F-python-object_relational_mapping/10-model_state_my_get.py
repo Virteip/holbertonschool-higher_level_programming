@@ -19,4 +19,4 @@ if __name__ == "__main__":
         for result in query:
             print("{}".format(result.id))
     else:
-        print("Nothing")
+        print("Not found")
