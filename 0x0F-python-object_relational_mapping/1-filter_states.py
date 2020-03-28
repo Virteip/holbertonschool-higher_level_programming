@@ -15,3 +15,6 @@ if __name__ == "__main__":
 
         for QueryResult in cur:
             print(QueryResult)
+
+        cur.close()
+        db.close()
