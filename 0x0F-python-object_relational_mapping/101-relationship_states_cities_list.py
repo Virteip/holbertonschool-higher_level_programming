@@ -23,3 +23,4 @@ if __name__ == "__main__":
         print("{}: {}".format(state.id, state.name))
         for cities in state.cities:
             print("\t{}: {}".format(cities.id, cities.name))
+    session.close()
