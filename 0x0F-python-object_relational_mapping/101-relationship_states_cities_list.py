@@ -21,5 +21,5 @@ if __name__ == "__main__":
 
     for state in results_matrix:
         print("{}: {}".format(state.id, state.name))
-        for citie in state.cities:
+        for cities in state.cities:
             print("\t{}: {}".format(cities.id, cities.name))
