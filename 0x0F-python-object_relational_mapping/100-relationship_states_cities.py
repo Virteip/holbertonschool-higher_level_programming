@@ -20,3 +20,4 @@ if __name__ == "__main__":
 
     session.add(city_new)
     session.commit()
+    session.close()
