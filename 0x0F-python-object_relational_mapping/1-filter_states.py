@@ -13,14 +13,10 @@ if __name__ == "__main__":
 
         cur = db.cursor()
 
-        cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N|^n'\
-        ORDER BY states.id ASC;")
-
+        cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N'\
+        ORDER BY id ASC;")
 
         query = cur.fetchall()
 
         for result in query:
             print(result)
-
-        cur.close()
-        db.close()
