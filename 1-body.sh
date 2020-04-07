@@ -1,4 +1,4 @@
 #!/bin/bash
 #Get it
 
-GET "$1"
+curl "$1"
