@@ -1,4 +1,4 @@
 #!/bin/bash
-#Get it
+#Get content from domain
 
-curl -sL "$1"
+curl "$1"
