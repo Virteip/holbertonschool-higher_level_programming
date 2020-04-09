@@ -1,3 +1,3 @@
 #!/bin/bash
-#Delete it
+#Delete it longer description
 curl -X DELETE "$1"
