@@ -1,8 +1,9 @@
 #!/usr/bin/node
 let i;
+let intRegex = /^\d+$/;
 const myInt = process.argv[2];
 
-if (parseInt(process.argv[2]) == myInt) {
+if (intRegex.test(parseInt(process.argv[2]))) {
   for (i = 0; i <= (process.argv[2] - 1); i++) {
     console.log('C is fun');
   }
