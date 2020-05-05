@@ -1,8 +1,7 @@
 #!/usr/bin/node
 
 if (process.argv[2]) {
-  const myVar = process.argv.slice(2);
-  console.log(myVar.join('\n'));
+  console.log(process.argv[2]);
 } else {
   console.log('No argument');
 }
