@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const intArray = process.argv.splice(2);
-const arrLength = process.argv.length;
+const arrLength = intArray.length;
 let result;
 
 function secondLargest (intArray) {
