@@ -12,5 +12,5 @@ const factorial = (a) => {
 if (intRegex.test(a)) {
   console.log(factorial(parseInt(a)));
 } else {
-  console.log('1');
+  console.log(1);
 }
