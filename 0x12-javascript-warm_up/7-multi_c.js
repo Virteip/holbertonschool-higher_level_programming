@@ -1,10 +1,9 @@
 #!/usr/bin/node
 let i;
-let intRegex = /^\d+$/;
-const myInt = process.argv[2];
+const intRegex = /^[0-9]*.[0-9]*$/;
 
-if (intRegex.test(parseInt(process.argv[2]))) {
-  for (i = 0; i <= (process.argv[2] - 1); i++) {
+if (intRegex.test(process.argv[2])) {
+  for (i = 0; i <= (parseInt(process.argv[2]) - 1); i++) {
     console.log('C is fun');
   }
 } else {
