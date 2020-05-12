@@ -5,17 +5,17 @@ let filmsJson;
 let count = 0;
 
 request('https://swapi-api.hbtn.io/api/films/', function (error, body) {
-  if (error != null) {
+  if (error) {
     console.error('error:', error);
-  }
-  for (let i = 0; i < 6; i++) {
-    filmsJson = JSON.parse(body.body).results[i].characters;
-
-    for (let i = 0; filmsJson[i] != null; i++) {
-      if (filmsJson[i].includes('18')) {
-        count++;
+  } else {
+    for (let i = 0; i < 6; i++) {
+      filmsJson = JSON.parse(body.body).results[i].characters;
+      for (let i = 0; filmsJson[i] != null; i++) {
+        if (filmsJson[i].includes('18')) {
+          count++;
+        }
       }
     }
+    console.log(count);
   }
-  console.log(count);
 });
