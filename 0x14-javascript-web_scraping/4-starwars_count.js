@@ -1,17 +1,16 @@
 #!/usr/bin/node
 
 const request = require('request');
-let filmsJson;
 let count = 0;
 
 request(process.argv.slice(2)[0], function (error, body) {
   if (error) {
     console.error('error:', error);
   } else {
-    for (let i = 0; i < 6; i++) {
-      filmsJson = JSON.parse(body.body).results[i].characters;
-      for (let i = 0; filmsJson[i] != null; i++) {
-        if (filmsJson[i].includes('18')) {
+    for (const films of JSON.parse(body.body).results) {
+      const charac = films.characters;
+      for (const character of charac) {
+        if (character.includes('18')) {
           count++;
         }
       }
