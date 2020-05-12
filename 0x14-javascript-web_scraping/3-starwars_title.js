@@ -6,7 +6,7 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv.slice(2)[0], funct
   if (JSON.parse(body.body).title !== undefined) {
     console.log(JSON.parse(body.body).title);
   }
-  if (error !== null) {
-
+  if (error) {
+    console.error(error);
   }
 });
