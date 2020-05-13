@@ -5,12 +5,13 @@ const nObj = {};
 
 request(process.argv.slice(2)[0], function (error, response, body) {
   if (!error) {
-    const contentJ = JSON.parse(body);
-    if (contentJ.length !== undefined) {
-      for (const key of contentJ) {
-        const id = key.userId;
-        if (nObj[id] === undefined) { nObj[id] = 0; }
-        if (key.completed === true) { nObj[id]++; }
+    const jContent = JSON.parse(body);
+    for (const key of jContent) {
+      if (key.completed === true) {
+        if (nObj[key.userId] === undefined) {
+          nObj[key.userId] = 0;
+        }
+        nObj[key.userId] += 1;
       }
     }
     console.log(nObj);
