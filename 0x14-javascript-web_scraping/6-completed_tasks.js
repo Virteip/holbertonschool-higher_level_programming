@@ -8,7 +8,7 @@ request(process.argv.slice(2)[0], function (error, body, response) {
     const contentJ = JSON.parse(response);
     for (const key of contentJ) {
       const id = key.userId;
-      if (nObj[id] === undefined) { nObxj[id] = 0; }
+      if (nObj[id] === undefined) { nObj[id] = 0; }
       if (key.completed === true) { nObj[id] += 1; }
     }
     console.log(nObj);
