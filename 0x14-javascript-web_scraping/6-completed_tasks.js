@@ -5,7 +5,7 @@ const nObj = {};
 
 request(process.argv.slice(2)[0], function (error, body, response) {
   if (error) {
-    console.log(error);
+    console.log(nObj);
   } else {
     const contentJ = JSON.parse(response);
 
@@ -16,6 +16,7 @@ request(process.argv.slice(2)[0], function (error, body, response) {
         if (key.completed === true) { nObj[id] += 1; }
       }
     } catch (error) {
+      return;
     }
     console.log(nObj);
   }
