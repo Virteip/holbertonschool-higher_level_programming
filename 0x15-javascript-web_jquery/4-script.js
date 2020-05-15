@@ -9,3 +9,5 @@ $("#toggle_header").on({
     $("header").addClass("green");
     $("header").removeClass("red");
     }
+  }
+  })
